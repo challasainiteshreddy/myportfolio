@@ -1,0 +1,40 @@
+.skill{
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    color: #7cf03d;
+    visibility: hidden;
+    opacity: 0;
+    animation: display 1.5s linear forwards;
+    animation-delay: 1.4s
+}
+@keyframes display{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.anim{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    flex-direction: column;
+    z-index: -1;
+    display: flex;
+}
+.anim .bar{
+    width: 100%;
+    height: 16.6%;
+    background: #1f242d;
+    transform: translatex(-100%);
+    animation: show .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes show{
+    100%{
+        transform: translatex(0%);
+    }
+}
